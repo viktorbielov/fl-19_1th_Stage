@@ -1,0 +1,25 @@
+.logo {
+    color: #C62C45;
+    font-size: 1rem;
+}
+
+.intro {
+    background: linear-gradient(rgba(3, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/header-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.products {
+    background-color: #fff;
+}
+
+.navbar,
+.learn-more,
+.footer {
+    background-color: #353a40 !important;
+}
+
+.btn__green {
+    background-color: #25a943 !important;
+}

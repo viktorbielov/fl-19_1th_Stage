@@ -1,0 +1,247 @@
+.font-ssp {
+  font-family: Source Sans Pro, sans-serif; }
+
+.font-hind, .form > div input {
+  font-family: Hind, sans-serif; }
+
+.font-fr {
+  font-family: Fresca, sans-serif; }
+
+.tours__box:nth-of-type(1) > .tours__image {
+  background-image: url(../img/1.jpg); }
+
+.tours__box:nth-of-type(2) > .tours__image {
+  background-image: url(../img/2.jpg); }
+
+.tours__box:nth-of-type(3) > .tours__image {
+  background-image: url(../img/3.jpg); }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  margin: 0; }
+
+main {
+  margin: auto;
+  max-width: 90vw; }
+
+li {
+  list-style: none; }
+
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background-image: url(../img/0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  min-height: 935px; }
+  header .menu {
+    padding-top: 50px;
+    margin-left: 10px; }
+    header .menu > ul {
+      display: flex;
+      margin: 0; }
+    header .menu li {
+      margin-right: 30px;
+      justify-content: center;
+      display: flex;
+      align-items: center; }
+      header .menu li > a {
+        text-align: center;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 2em;
+        color: #b4ceea; }
+  header > .header__inner {
+    margin: 320px auto 100px;
+    max-width: 49vw;
+    text-align: center; }
+    header > .header__inner .htitle .htitle__text {
+      font-family: Hind, sans-serif;
+      opacity: 75%;
+      font-size: 3.5rem;
+      font-weight: lighter;
+      color: white; }
+    header > .header__inner .hbtn > button {
+      border-radius: 0;
+      color: #808080;
+      background-color: transparent;
+      border: 1px solid #808080;
+      padding: 10px 40px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transition: all 0.5s;
+      min-width: 193px;
+      min-height: 65px;
+      font-size: 1.2em;
+      cursor: pointer; }
+
+.tours {
+  margin: 0 auto;
+  max-width: 65%;
+  text-align: center; }
+  .tours__box {
+    display: flex;
+    margin: 50px 0;
+    box-shadow: 0px 0px 10px 0px black; }
+    .tours__box > .tours__image {
+      min-height: 250px;
+      min-width: 250px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center; }
+  .tours__info {
+    text-align: center;
+    padding: 30px 20px;
+    color: #8d9daa; }
+  .tours__maintitle {
+    font-weight: lighter;
+    font-size: 3.5rem; }
+  .tours__title {
+    margin: 0;
+    font-size: 3em;
+    font-weight: lighter; }
+  .tours__desc {
+    text-align: left;
+    font-size: 1.6em; }
+
+.cards {
+  background-color: #8d6f79;
+  text-align: center;
+  margin-bottom: 30px; }
+  .cards__title {
+    padding: 50px 0 0;
+    color: #b595a5;
+    font-size: 2.3rem;
+    font-weight: lighter;
+    margin: 0; }
+  .cards__container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px 30px;
+    max-height: 200px; }
+  .cards__card {
+    display: flex;
+    background-color: #cba2b0;
+    text-align: left;
+    min-width: 33%;
+    margin: 0 10px; }
+    .cards__card > img {
+      border-radius: 50%;
+      max-height: 65%;
+      margin: 5px; }
+    .cards__card > p {
+      margin: auto 20px;
+      color: white;
+      font-size: 1.3em; }
+
+.form {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 58%;
+  min-height: 200px;
+  background-color: #8595a2; }
+  .form__title {
+    padding: 50px 0 0;
+    color: #b1c1ca;
+    font-size: 2.3rem;
+    font-weight: lighter;
+    margin: 0; }
+  .form > div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 45px; }
+    .form > div input {
+      outline: 0;
+      background: transparent;
+      border-width: 0 0 1px;
+      border-color: rgba(85, 85, 85, 0.7);
+      font-size: 1.1em; }
+      .form > div input::placeholder {
+        color: rgba(85, 85, 85, 0.7); }
+    .form > div .form__select {
+      color: rgba(85, 85, 85, 0.7);
+      font-size: 1.1em;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid rgba(85, 85, 85, 0.7);
+      font-weight: 500; }
+
+footer {
+  padding: 0 50px;
+  max-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  background: #3d5585; }
+  footer h6 {
+    color: #6495ed;
+    font-size: 1.4em;
+    margin: 20px 0 30px; }
+  footer > div {
+    flex: 1; }
+  footer img {
+    margin: 5px;
+    max-width: 35px;
+    max-height: 35px; }
+  footer .fleft ul {
+    display: flex;
+    margin: 0;
+    max-height: 30px;
+    padding-left: 0;
+    align-items: flex-end; }
+    footer .fleft ul li {
+      margin-right: 15px; }
+  footer .fleft p {
+    margin-top: 37px;
+    font-size: 1.3em;
+    color: #0a285e; }
+  footer .fcenter {
+    display: flex;
+    justify-content: space-between; }
+    footer .fcenter div {
+      margin-right: 175px; }
+      footer .fcenter div a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 1.1em;
+        vertical-align: baseline;
+        text-decoration: none;
+        color: #4168ab; }
+      footer .fcenter div ul {
+        padding-left: 20px; }
+  footer .fright h6 {
+    color: black; }
+  footer .fright .payment {
+    color: #6495ed; }
+  footer .fright img {
+    max-width: 60px;
+    max-height: 60px; }
+  footer .fright form input,
+  footer .fright form button {
+    display: inline-block;
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 15px;
+    font-size: 1.1em; }
+  footer .fright form button {
+    background: #0a285e;
+    color: white;
+    cursor: pointer; }
+  footer .fright ul {
+    padding-left: 0;
+    display: flex;
+    align-items: flex-end; }
+    footer .fright ul li a {
+      text-decoration: none; }

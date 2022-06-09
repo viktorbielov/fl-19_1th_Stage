@@ -1,0 +1,326 @@
+%fontssp {
+    font-family: Source Sans Pro, sans-serif;
+}
+
+%fonthind {
+    font-family: Hind, sans-serif;
+}
+
+%fontfresca {
+    font-family: Fresca, sans-serif;
+}
+
+@mixin imageinsidecard($path) {
+    background-image: url($path);
+}
+
+@each $i,
+$img in $imagepack {
+    .tours__box:nth-of-type(#{$i})>.tours__image {
+        @include imageinsidecard(#{$img})
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    margin: auto;
+    max-width: 90vw;
+}
+
+li {
+    list-style: none;
+}
+
+.font-ssp {
+    @extend %fontssp;
+}
+
+.font-hind {
+    @extend %fonthind;
+}
+
+.font-fr {
+    @extend %fontfresca;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-image: $headerbg;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    min-height: 935px;
+    .menu {
+        padding-top: 50px;
+        margin-left: 10px;
+        >ul {
+            display: flex;
+            margin: 0;
+        }
+        li {
+            margin-right: 30px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            >a {
+                text-align: center;
+                text-decoration: none;
+                font-weight: $navfw;
+                font-size: $navfsz;
+                color: $navcolor;
+            }
+        }
+    }
+    >.header__inner {
+        margin: 320px auto 100px;
+        max-width: 49vw;
+        text-align: center;
+        .htitle {
+            .htitle__text {
+                font-family: Hind, sans-serif;
+                opacity: 75%;
+                font-size: $headertitle;
+                font-weight: lighter;
+                color: white;
+            }
+        }
+        .hbtn {
+            >button {
+                border-radius: 0;
+                color: #808080;
+                background-color: transparent;
+                border: 1px solid #808080;
+                padding: 10px 40px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                transition: all 0.5s;
+                min-width: 193px;
+                min-height: 65px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.tours {
+    margin: 0 auto;
+    max-width: 65%;
+    text-align: center;
+    &__box {
+        display: flex;
+        margin: 50px 0;
+        box-shadow: 0px 0px 10px 0px black;
+        >.tours__image {
+            min-height: 250px;
+            min-width: 250px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+        }
+    }
+    &__info {
+        text-align: center;
+        padding: 30px 20px;
+        color: $textcolor;
+    }
+    &__maintitle {
+        font-weight: lighter;
+        font-size: 3.5rem;
+    }
+    &__title {
+        margin: 0;
+        font-size: 3em;
+        font-weight: lighter;
+    }
+    &__desc {
+        text-align: left;
+        font-size: 1.6em;
+    }
+}
+
+.cards {
+    background-color: $cardcolor;
+    text-align: center;
+    margin-bottom: 30px;
+    &__title {
+        padding: 50px 0 0;
+        color: $cardstitle;
+        font-size: 2.3rem;
+        font-weight: lighter;
+        margin: 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 20px 30px 30px;
+        max-height: 200px;
+    }
+    &__card {
+        display: flex;
+        background-color: $cardinnercolor;
+        text-align: left;
+        min-width: 33%;
+        margin: 0 10px;
+        >img {
+            border-radius: 50%;
+            max-height: 65%;
+            margin: 5px;
+        }
+        >p {
+            margin: auto 20px;
+            color: white;
+            font-size: 1.3em;
+        }
+    }
+}
+
+.form {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 58%;
+    min-height: 200px;
+    background-color: $formcolor;
+    &__title {
+        padding: 50px 0 0;
+        color: $formtitle;
+        font-size: 2.3rem;
+        font-weight: lighter;
+        margin: 0;
+    }
+    >div {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 45px;
+        input {
+            outline: 0;
+            background: transparent;
+            border-width: 0 0 1px;
+            border-color: rgba($color: #555555, $alpha: 0.7);
+            font-size: 1.1em;
+            @extend %fonthind;
+            &::placeholder {
+                color: rgba($color: #555555, $alpha: 0.7);
+            }
+        }
+        .form__select {
+            color: rgba($color: #555555, $alpha: 0.7);
+            font-size: 1.1em;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid rgba($color: #555555, $alpha: 0.7);
+            font-weight: 500;
+        }
+    }
+}
+
+footer {
+    padding: 0 50px;
+    max-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background: $footerbg;
+    h6 {
+        color: $footerh6;
+        font-size: 1.4em;
+        margin: 20px 0 30px;
+    }
+    >div {
+        flex: 1;
+    }
+    img {
+        margin: 5px;
+        max-width: 35px;
+        max-height: 35px;
+    }
+    .fleft {
+        ul {
+            display: flex;
+            margin: 0;
+            max-height: 30px;
+            padding-left: 0;
+            align-items: flex-end;
+            li {
+                margin-right: 15px;
+            }
+        }
+        p {
+            margin-top: 37px;
+            font-size: 1.3em;
+            color: $footerbtn;
+        }
+    }
+    .fcenter {
+        display: flex;
+        justify-content: space-between;
+        div {
+            margin-right: 175px;
+            a {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 1.1em;
+                vertical-align: baseline;
+                text-decoration: none;
+                color: $footera;
+            }
+            ul {
+                padding-left: 20px;
+            }
+        }
+    }
+    .fright {
+        h6 {
+            color: black;
+        }
+        .payment {
+            color: $footerh6;
+        }
+        img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+        form {
+            input,
+            button {
+                display: inline-block;
+                width: 100%;
+                min-height: 40px;
+                margin-bottom: 15px;
+                font-size: 1.1em;
+            }
+            button {
+                background: $footerbtn;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        ul {
+            padding-left: 0;
+            display: flex;
+            align-items: flex-end;
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

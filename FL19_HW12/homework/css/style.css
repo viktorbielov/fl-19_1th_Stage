@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 97%);
+    min-height: 100vh;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5em;
+    align-items: center;
+}
+
+.game-title {
+    color: hsl(0 0% 35%);
+    margin-bottom: 0.5em;
+}
+
+.tiles-section {
+    display: grid;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+    gap: .25em;
+    grid-template-rows: repeat(6, 3em);
+    grid-template-columns: repeat(5, 3em);
+    margin-bottom: 0.5em;
+}
+
+.tile {
+    font-size: 1.8em;
+    border: .05em solid hsl(240, 12%, 31%);
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    user-select: none;
+    border-radius: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.18);
+    transition: all 0.3s;
+}
+
+.tile:hover,
+.tile:focus {
+    border-color: hsl(208, 100%, 49%);
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-between;
+    min-width: 380px;
+}
+
+.button-section button {
+    font-size: inherit;
+    background-color: hsl(212, 100%, 62%);
+    color: white;
+    min-height: 3em;
+    min-width: 5em;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.18);
+    transition: all 0.3s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button-section button:hover {
+    background-color: hsl(212, 100%, 80%);
+}
+
+.tile[data-state="active"] {
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.18) inset;
+}
+
+.tile[data-state="wrong-location"] {
+    border: none;
+    background-color: yellow;
+}
+
+.tile[data-state="wrong"] {
+    border: none;
+    background-color: grey;
+}
+
+.tile[data-state="correct"] {
+    border: none;
+    background-color: green;
+}
+
+.tile.rotate {
+    animation: rotate 750ms ease-in-out;
+}
+
+.tile.rotate:nth-child(even) {
+    animation: rotateBackwards 750ms ease-in-out;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateBackwards {
+    100% {
+        transform: rotate(-360deg);
+    }
+}

@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+input {
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.navline {
+    margin-bottom: 50px;
+}
+
+.navline button {
+    margin: 0 5px;
+    background-color: rgb(255, 210, 63);
+    border-radius: 5px;
+    height: 35px;
+}
+
+.navline button:active {
+    background-color: rgb(255, 177, 118);
+}
+
+.big-button button {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgb(59, 183, 255);
+    font-size: 35px;
+}
+
+.big-button button:active {
+    background-color: rgb(97, 255, 250);
+}
